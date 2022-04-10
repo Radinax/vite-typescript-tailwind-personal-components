@@ -19,9 +19,9 @@ This is a simple React app template powered by [vite](https://vitejs.dev).
 ## Usage
 
 ```sh
-npx degit brielov/react-app my-app
+npm install
 
-cd my-app && npm install
+npm run dev
 ```
 
 ## Imports
