@@ -4,6 +4,26 @@
 
 @layer base {
   body {
-    -webkit-tap-highlight-color: transparent;
+    @apply font-sans;
+    @apply text-sm;
+    @apply font-normal;
+    @apply text-neutral-700;
+    @apply bg-slate-50;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+    @apply font-normal;
+    @apply leading-none;
+  }
+
+  h3 {
+    @apply text-xl;
+    @apply font-normal;
+    @apply leading-none;
   }
 }
