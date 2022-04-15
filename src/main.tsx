@@ -1,3 +1,4 @@
+import Loader from "./components/loader/loader";
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
@@ -9,7 +10,7 @@ const root = document.getElementById("root");
 root &&
   createRoot(root).render(
     <StrictMode>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <BrowserRouter>
           <App />
         </BrowserRouter>

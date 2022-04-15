@@ -1,3 +1,5 @@
+import Header from "./components/header/header.component";
+import Sidebar from "./components/sidebar/sidebar.component";
 import { AppProvider } from "./providers/providers";
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -7,14 +9,17 @@ const HomeSection = lazy(() => import("~/views/Home"));
 
 const routes = [
   {
-    path: "/card",
+    path: "/cards",
     element: <CardsSection />,
   },
 ];
 
 const App: React.FC = () => (
-  <>
+  <div className="h-screen relative pl-16">
     <AppProvider>
+      <Header />
+      <Sidebar />
+
       <Routes>
         <Route element={<HomeSection />} path="/" />
         {routes.map((route) => (
@@ -22,7 +27,7 @@ const App: React.FC = () => (
         ))}
       </Routes>
     </AppProvider>
-  </>
+  </div>
 );
 
 export default App;

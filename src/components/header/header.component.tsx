@@ -66,7 +66,7 @@ const Header = () => {
   }, [setTheme, toggle]);
 
   return (
-    <header className="w-full">
+    <header className="w-full fixed top-0 left-0">
       <div className="relative flex h-16 flex-shrink-0 bg-secondary shadow-sm dark:bg-dark-secondary">
         <div className="flex flex-1 justify-between px-4 sm:px-6">
           <div />

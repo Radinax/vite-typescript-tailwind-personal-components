@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import ErrorBoundary from "~/components/error-boundary";
+import Loader from "~/components/loader/loader";
 import { ThemeProvider } from "~/context/theme";
 
 const ErrorFallback = () => {
@@ -25,7 +26,7 @@ type AppProviderProps = {
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <ErrorBoundary fallback={ErrorFallback}>
         <ThemeProvider>{children}</ThemeProvider>
       </ErrorBoundary>
