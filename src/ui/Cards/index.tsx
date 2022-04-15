@@ -1,4 +1,4 @@
-import { Page } from "../Pages.component";
+import { Page } from "../../components/Pages.component";
 import Card from "./Cards.component";
 import ProductHover from "./ProductHover/ProductHover";
 

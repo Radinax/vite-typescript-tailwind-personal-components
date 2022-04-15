@@ -3,27 +3,45 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: local("Poppins-SemiBold"),
+      url(./assets/fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: local("Poppins-Regular"),
+      url(./assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Poppins-Italic";
+    src: local("Poppins-Italic"),
+      url(./assets/fonts/Poppins/Poppins-Italic.ttf) format("truetype");
+  }
+
   body {
-    @apply font-sans;
+    @apply font-poppins;
     @apply text-sm;
     @apply font-normal;
-    @apply text-neutral-700;
-    @apply bg-slate-50;
   }
 
   h1 {
-    @apply text-3xl;
+    @apply font-poppinsSemiBold text-3xl text-secondary dark:text-dark-secondary;
   }
 
   h2 {
-    @apply text-2xl;
+    @apply text-2xl text-secondary dark:text-dark-secondary;
     @apply font-normal;
     @apply leading-none;
   }
 
   h3 {
-    @apply text-xl;
+    @apply text-xl text-secondary dark:text-dark-secondary;
     @apply font-normal;
     @apply leading-none;
+  }
+
+  p {
+    @apply text-gray-800 dark:text-gray-100;
   }
 }
